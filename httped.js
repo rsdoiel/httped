@@ -9,10 +9,9 @@
    
    function Get(url, onComplete, onStateChange) {
       var httpRequest;
-      // do stuff
-      console.log("url", url);// DEBUG
-      
-      // Taken from Mozilla's Ajax example
+
+      // This is derived on the example at Mozilla's dev site
+      // https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started
       if (window.XMLHttpRequest) { // Mozilla, Safari, ...
           httpRequest = new XMLHttpRequest();
       } else if (window.ActiveXObject) { // IE 8 and older
@@ -25,7 +24,7 @@
          }
       }
       if (!httpRequest) {
-         throw("remote http requests not supported.");
+         throw("remote xhr not supported.");
       }      
       
       // Attach listeners for compelte and on state change
