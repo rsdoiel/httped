@@ -1,4 +1,5 @@
-http-get
-========
+httped
+======
 
-A browser friendly http GET wrapper of xhr.
+A web browser friendly wrapper of http GET, POST, PUT, DELETE using xhr.
+
