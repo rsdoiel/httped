@@ -18,12 +18,10 @@
       } else if (window.ActiveXObject) { // IE 8 and older
          try {
            httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
-         } 
-         catch (e) {
+         } catch (e) {
            try {
              httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-           } 
-           catch (e) {}
+           } catch (e) {}
          }
       }
       if (!httpRequest) {
@@ -34,13 +32,15 @@
       function manageStateChange () {
          if (httpRequest.readyState === 4) {
             // Two params, http status, response
-            onComplete(httpRequest.status, httpRequest);
+            onComplete(httpRequest.status, httpRequest.response);
          } else {
-            onStateChange(httpRequest.readyState, httpRequest);
+            onStateChange(httpRequest.readyState, httpRequest.response);
          }
       }
-      
+
       httpRequest.onreadystatechange = manageStateChange;
+      httpRequest.open('GET', url);
+      httpRequest.send(null);
    };
    HTTPED.Get = Get;
 
