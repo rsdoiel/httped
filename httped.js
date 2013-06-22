@@ -1,6 +1,10 @@
 /**
  * httped.js - A web browser friendly wrapper of xhr.
  * @author R. S. Doiel, <rsdoiel@gmail.com>
+ * copyright (c) R. S. Doiel
+ * all rights reserved.
+ * Released under the BSD 2-clause license.
+ * See http://opensource.org/licenses/BSD-2-clause for details.  
  */
 /*jslint browser: true, indent: 2 */
 (function (global) {
@@ -10,7 +14,7 @@
   function Get(url, onComplete, onStateChange) {
     var xhr;
 
-    // xhr handling is derived from code samples at Mozilla's dev site
+    // xhr handling is inspired by code samples at Mozilla's dev site
     // https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
       xhr = new XMLHttpRequest();

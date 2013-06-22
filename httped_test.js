@@ -1,5 +1,9 @@
 /**
  * httped_test.js - Test code to make sure httped_test works in the browser.
+ * copyright (c) R. S. Doiel
+ * all rights reserved.
+ * Released under the BSD 2-clause license. 
+ * See http://opensource.org/licenses/BSD-2-clause for details.
  */
 /*jslint browser: true, indent: 2 */
 YUI().use("test", function (Y) {
